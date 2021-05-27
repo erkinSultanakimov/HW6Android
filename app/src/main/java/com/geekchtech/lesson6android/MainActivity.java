@@ -62,17 +62,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.home:
+                    case R.id.allinbox:
                         fragment = new HomeFragment();
                         break;
-                    case R.id.history:
+                    case R.id.inbox:
                         fragment = new HistoryFragment();
                         break;
-                    case R.id.profile:
+                    case R.id.snoozed:
                         fragment = new ProfileFragment();
                         break;
+                    case R.id.done:
+                        fragment = new DoneFragment();
+                        break;
+                    case R.id.drafts:
+                        fragment = new DraftsFragment();
+                        break;
+                    case R.id.sent:
+                        fragment = new SentFragment();
+                        break;
+                    case R.id.reminder:
+                        fragment = new RemindersFragment();
+                        break;
+                    case R.id.settings:
+                        fragment = new SettingsFragment();
+                        break;
+                    case R.id.help:
+                        fragment = new HelpFragment();
+                        break;
+
+
                     default:
                         fragment = new HomeFragment();
+
                 }
                 setFragment(fragment);
                 item.setChecked(true);
